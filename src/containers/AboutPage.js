@@ -38,7 +38,9 @@ class RecoverWalletPage extends React.Component {
           <p>SafeCoin Wallet v{VERSION}</p>
           <br/>
           <p>Author: Kendrick Tan</p>
-          <p>Made for safecoin.org</p>
+          <p>Made for zensystem.io</p>
+          <p>Forked: OleksandrBlack</p>
+          <p>For safecoin.org</p>
           <p>Found a bug? File it &nbsp;
             <a
               href='#'

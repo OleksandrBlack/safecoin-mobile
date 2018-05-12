@@ -242,7 +242,7 @@ class SendPage extends React.Component {
     // Alert messages too
     var errString = ''
 
-    if (recipientAddress.length !== 35) {
+    if (recipientAddress.length !== 34) {
       errString += TRANSLATIONS[CUR_LANG].SendPage.invalidAddress
       errString += '\n\n'
     }
