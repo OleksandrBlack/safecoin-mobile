@@ -63,3 +63,5 @@ Icons are a bit of a bitch to setup for iOS. Make sure you've added the ios plat
 [rubyxroot](https://github.com/rubyxroot)
 
 [berar](https://github.com/berar)
+
+[OleksandrBlack](https://github.com/OleksandrBlack)
