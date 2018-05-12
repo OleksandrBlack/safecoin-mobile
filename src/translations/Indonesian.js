@@ -13,7 +13,7 @@ export const INDONESIAN_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Luar'
   },
   MainPage: {
-    title: 'Dompet SAFE',
+    title: 'Dompet SafeCoin',
     value: 'Nilai',
     send: 'Kirim',
     received: 'Diterima',
@@ -79,8 +79,8 @@ export const INDONESIAN_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Ubah PIN',
-    newPinPageTitle: 'Penyiapan Dompet SAFE',
-    verifyPinPageTitle: 'Verifikasi Pin Dompet SAFE',
+    newPinPageTitle: 'Penyiapan Dompet SafeCoin',
+    verifyPinPageTitle: 'Verifikasi Pin Dompet SafeCoin',
     setupNewPin: 'Pasang Pin bar',
     reenterPin: 'Masukkan kembali PIN Anda',
     pinsNotSimilar: 'PIN yang dimasukkan tidak cocok',

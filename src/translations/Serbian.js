@@ -13,7 +13,7 @@ export const SERBIAN_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Izlaz'
   },
   MainPage: {
-    title: 'SAFE Novčanik',
+    title: 'SafeCoin Novčanik',
     value: 'Vrednost',
     send: 'Pošalji',
     received: 'Primljene',
@@ -79,8 +79,8 @@ export const SERBIAN_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Promeni PIN',
-    newPinPageTitle: 'Podešavanje SAFE Novčanika',
-    verifyPinPageTitle: 'SAFE Novčanik PIN Verifikacija',
+    newPinPageTitle: 'Podešavanje SafeCoin Novčanika',
+    verifyPinPageTitle: 'SafeCoin Novčanik PIN Verifikacija',
     setupNewPin: 'Postavite novi PIN',
     reenterPin: 'Ponovo unesite PIN',
     pinsNotSimilar: 'Uneti PINovi se ne slažu',

@@ -13,7 +13,7 @@ export const SPANISH_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Salientes'
   },
   MainPage: {
-    title: 'Billetera SAFE',
+    title: 'Billetera SafeCoin',
     value: 'Valor',
     send: 'Enviar',
     received: 'Recibido',
@@ -79,8 +79,8 @@ export const SPANISH_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Cambiar PIN',
-    newPinPageTitle: 'Configuración de Billetera SAFE',
-    verifyPinPageTitle: 'Verificación PIN de Billetera SAFE',
+    newPinPageTitle: 'Configuración de Billetera SafeCoin',
+    verifyPinPageTitle: 'Verificación PIN de Billetera SafeCoin',
     setupNewPin: 'Configurar un nuevo PIN',
     reenterPin: 'Vuelva a introducir su PIN',
     pinsNotSimilar: 'Los PINs introducidos no coinciden',

@@ -13,7 +13,7 @@ export const FRENCH_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Sortant'
   },
   MainPage: {
-    title: 'Porte-Monnaie SAFE',
+    title: 'Porte-Monnaie SafeCoin',
     value: 'Valeur',
     send: 'Envoi',
     received: 'Reçu',
@@ -79,8 +79,8 @@ export const FRENCH_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Changer le code PIN',
-    newPinPageTitle: 'Configuration du Porte-Monnaie SAFE',
-    verifyPinPageTitle: 'Vérification du code PIN du Porte-Monnaie SAFE',
+    newPinPageTitle: 'Configuration du Porte-Monnaie SafeCoin',
+    verifyPinPageTitle: 'Vérification du code PIN du Porte-Monnaie SafeCoin',
     setupNewPin: 'Configurer un nouveau code PIN',
     reenterPin: 'Répéter votre code PIN',
     pinsNotSimilar: 'Les codes PIN entrés ne correspondent pas',

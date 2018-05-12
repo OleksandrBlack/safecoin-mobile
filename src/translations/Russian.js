@@ -13,7 +13,7 @@ export const RUSSIAN_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Ушло' // still sounds wrong but I've checked a lot of different BTC wallets and it's really bad everywhere.
   },
   MainPage: {
-    title: 'SAFE кошелек',
+    title: 'SafeCoin Кошелек',
     value: 'На счету',
     send: 'Отправить',
     received: 'Получено',
@@ -79,8 +79,8 @@ export const RUSSIAN_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Изменить PIN',
-    newPinPageTitle: 'Настройка SAFE кошелька',
-    verifyPinPageTitle: 'SAFE кошелек подтверждение PIN',
+    newPinPageTitle: 'Настройка SafeCoin Кошелька',
+    verifyPinPageTitle: 'SafeCoin Кошелек подтверждение PIN',
     setupNewPin: 'Введите новый PIN',
     reenterPin: 'Повторите ваш PIN',
     pinsNotSimilar: 'Введеные PIN-ы не совпадают',

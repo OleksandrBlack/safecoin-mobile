@@ -13,7 +13,7 @@ export const CHINESE_TRANSLATION: TRANSLATION_OBJ = {
     out: '输出'
   },
   MainPage: {
-    title: 'SAFE 钱包',
+    title: 'SafeCoin 钱包',
     value: '价值',
     send: '发',
     received: '收',
@@ -44,7 +44,7 @@ export const CHINESE_TRANSLATION: TRANSLATION_OBJ = {
     invalidFee: '无效 `费用`。',
     zeroAmount: '数量要多过 0。',
     notEnoughSAFE: '您钱包不够 SAFE 来做这个交易。',
-    noCameraPermissions: '你需要允许 SAFE 钱包使用你的相机。'
+    noCameraPermissions: '你需要允许 SafeCoin 钱包使用你的相机。'
   },
   TxDetailPage: {
     txid: '交易',
@@ -79,8 +79,8 @@ export const CHINESE_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: '更改 PIN',
-    newPinPageTitle: 'SAFE 钱包安装',
-    verifyPinPageTitle: 'SAFE 钱包 PIN 证实',
+    newPinPageTitle: 'SafeCoin 钱包安装',
+    verifyPinPageTitle: 'SafeCoin 钱包 PIN 证实',
     setupNewPin: '设置新 PIN',
     reenterPin: '再次输入 PIN',
     pinsNotSimilar: '输入的 PIN 不一样',

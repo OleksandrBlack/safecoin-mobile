@@ -13,7 +13,7 @@ export const FINNISH_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Lähtevä'
   },
   MainPage: {
-    title: 'SAFE Wallet',
+    title: 'SafeCoin Wallet',
     value: 'Arvo',
     send: 'Lähetä',
     received: 'Vastaanotettu',
@@ -79,8 +79,8 @@ export const FINNISH_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Vaihda PIN',
-    newPinPageTitle: 'SAFE Wallet määrittäminen',
-    verifyPinPageTitle: 'SAFE Wallet PIN-kysely',
+    newPinPageTitle: 'SafeCoin Wallet määrittäminen',
+    verifyPinPageTitle: 'SafeCoin Wallet PIN-kysely',
     setupNewPin: 'Anna uusi PIN',
     reenterPin: 'Vahvista uusi PIN',
     pinsNotSimilar: 'Annetut PIN-luvut eivät täsmää',

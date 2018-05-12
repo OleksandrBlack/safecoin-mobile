@@ -13,7 +13,7 @@ export const PORTUGUESE_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Saída'
   },
   MainPage: {
-    title: 'Carteira SAFE',
+    title: 'Carteira SafeCoin',
     value: 'Valor',
     send: 'Enviar',
     received: 'Recebido',
@@ -79,8 +79,8 @@ export const PORTUGUESE_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Alterar PIN',
-    newPinPageTitle: 'Configuração da carteira de SAFE',
-    verifyPinPageTitle: 'Verificação do Pin da Carteira SAFE',
+    newPinPageTitle: 'Configuração da carteira de SafeCoin',
+    verifyPinPageTitle: 'Verificação do Pin da Carteira SafeCoin',
     setupNewPin: 'Configure um novo PIN',
     reenterPin: 'Confirme seu PIN',
     pinsNotSimilar: 'PINs digitados não conferem',

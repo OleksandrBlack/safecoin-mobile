@@ -13,7 +13,7 @@ export const DUTCH_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Uit'
   },
   MainPage: {
-    title: 'SAFE Portefeuille',
+    title: 'SafeCoin Portefeuille',
     value: 'Waarde',
     send: 'Verstuur',
     received: 'Ontvangen',
@@ -79,8 +79,8 @@ export const DUTCH_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Verander PIN',
-    newPinPageTitle: 'SAFE Portefuille Installatiewizard',
-    verifyPinPageTitle: 'SAFE Portefuille PIN Verificatie',
+    newPinPageTitle: 'SafeCoin Portefeuille Installatiewizard',
+    verifyPinPageTitle: 'SafeCoin Portefeuille PIN Verificatie',
     setupNewPin: 'Stel een nieuwe PIN in',
     reenterPin: 'Voer jouw PIN nogmaals in',
     pinsNotSimilar: 'Ingevoerde PIN komt niet overeen',

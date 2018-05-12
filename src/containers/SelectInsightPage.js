@@ -51,18 +51,9 @@ class SelectInsightPage extends React.Component {
           <ListHeader>
             Preconfigured Nodes
           </ListHeader>
-          <ListItem tappable onClick={() => this.props.setInsightAPI('http://explorer.safecoin.org/api')}>
+          <ListItem tappable onClick={() => this.props.setInsightAPI('https://explorer.safecoin.org/api')}>
             explorer.safecoin.org
           </ListItem>
-       //   <ListItem tappable onClick={() => this.props.setInsightAPI('https://explorer2.safesystem.io/insight-api-safe/')}>
-       //     safesystem2.io
-       //   </ListItem>
-       //   <ListItem tappable onClick={() => this.props.setInsightAPI('http://explorer.safemine.pro/insight-api-safe/')}>
-       //     safemine.pro
-       //   </ListItem>
-       //   <ListItem tappable onClick={() => this.props.setInsightAPI('https://explorer.safe-solutions.io/api/')}>
-       //     explorer.safe-solutions.io
-       //   </ListItem>
         </List>
       </Page>
     )

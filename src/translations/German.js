@@ -13,7 +13,7 @@ export const GERMAN_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Ausgehend'
   },
   MainPage: {
-    title: 'SAFE Wallet',
+    title: 'SafeCoin Wallet',
     value: 'Wert',
     send: 'Senden',
     received: 'Erhalten',
@@ -80,7 +80,7 @@ export const GERMAN_TRANSLATION: TRANSLATION_OBJ = {
   PinPage: {
     changePinTitle: 'PIN ändern',
     newPinPageTitle: 'SAFE Brieftasche einrichten',
-    verifyPinPageTitle: 'SAFE Wallet PIN Verifizierung',
+    verifyPinPageTitle: 'SafeCoin Wallet PIN Verifizierung',
     setupNewPin: 'Neue PIN festlegen',
     reenterPin: 'PIN erneut eingeben',
     pinsNotSimilar: 'PINs stimmen nicht überein',

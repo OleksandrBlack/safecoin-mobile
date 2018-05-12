@@ -13,7 +13,7 @@ export const NORWEGIAN_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Ut'
   },
   MainPage: {
-    title: 'SAFE Lommebok',
+    title: 'SafeCoin Lommebok',
     value: 'Verdi',
     send: 'Send',
     received: 'Mottatt',
@@ -78,8 +78,8 @@ export const NORWEGIAN_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Endre PIN',
-    newPinPageTitle: 'SAFE Lommebok Oppsett',
-    verifyPinPageTitle: 'SAFE Lommebok PIN Bekreftelse',
+    newPinPageTitle: 'SafeCoin Lommebok Oppsett',
+    verifyPinPageTitle: 'SafeCoin Lommebok PIN Bekreftelse',
     setupNewPin: 'Skriv inn ny PIN',
     reenterPin: 'Gjenta ny PIN',
     pinsNotSimilar: 'PINs stemmer ikke',

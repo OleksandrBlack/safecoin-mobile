@@ -13,7 +13,7 @@ export const ITALIAN_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Out'
   },
   MainPage: {
-    title: 'SAFE Wallet',
+    title: 'SafeCoin Wallet',
     value: 'Valore',
     send: 'Invia',
     received: 'Ricevi',
@@ -79,8 +79,8 @@ export const ITALIAN_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Cambia PIN',
-    newPinPageTitle: 'SAFE Wallet Installazione',
-    verifyPinPageTitle: 'SAFE Wallet Verifica PIN',
+    newPinPageTitle: 'SafeCoin Wallet Installazione',
+    verifyPinPageTitle: 'SafeCoin Wallet Verifica PIN',
     setupNewPin: 'Crea un novo PIN',
     reenterPin: 'Riscrivi il tuo PIN',
     pinsNotSimilar: 'I PIN inseriti non coincidono',

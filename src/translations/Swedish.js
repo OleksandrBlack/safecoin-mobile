@@ -13,7 +13,7 @@ export const SWEDISH_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Ut'
   },
   MainPage: {
-    title: 'SAFE Wallet',
+    title: 'SafeCoin Wallet',
     value: 'Värde',
     send: 'Skicka',
     received: 'Mottaget',
@@ -79,8 +79,8 @@ export const SWEDISH_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Ändra PIN',
-    newPinPageTitle: 'SAFE Wallet Inställningar',
-    verifyPinPageTitle: 'SAFE Wallet PIN Bekräftelse',
+    newPinPageTitle: 'SafeCoin Wallet Inställningar',
+    verifyPinPageTitle: 'SafeCoin Wallet PIN Bekräftelse',
     setupNewPin: 'Skapa en ny PIN',
     reenterPin: 'Skriv in din PIN igen',
     pinsNotSimilar: 'Dina inskrivna PIN matchar inte',

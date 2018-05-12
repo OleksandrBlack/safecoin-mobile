@@ -13,7 +13,7 @@ export const AFRIKAANS_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Uit'
   },
   MainPage: {
-    title: 'SAFE Beursie',
+    title: 'SafeCoin Beursie',
     value: 'Waarde',
     send: 'Gestuur',
     received: 'Ontvang',
@@ -79,8 +79,8 @@ export const AFRIKAANS_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Verander PIN',
-    newPinPageTitle: 'Opstel van SAFE Beursie',
-    verifyPinPageTitle: 'SAFE Beursie PIN Verifikasie',
+    newPinPageTitle: 'Opstel van SafeCoin Beursie',
+    verifyPinPageTitle: 'SafeCoin Beursie PIN Verifikasie',
     setupNewPin: 'Stel nuwe PIN op',
     reenterPin: 'Voer jou PIN weer in',
     pinsNotSimilar: 'PINs wat ingevoer word, stem nie ooreen nie',

@@ -13,7 +13,7 @@ export const FILIPINO_TRANSLATION: TRANSLATION_OBJ = {
     out: 'Palabas'
   },
   MainPage: {
-    title: 'SAFE Wallet',
+    title: 'SafeCoin Wallet',
     value: 'Halaga',
     send: 'Padala',
     received: 'Natanggap',
@@ -79,8 +79,8 @@ export const FILIPINO_TRANSLATION: TRANSLATION_OBJ = {
   },
   PinPage: {
     changePinTitle: 'Palitan ang PIN',
-    newPinPageTitle: 'SAFE Wallet Setup',
-    verifyPinPageTitle: 'Pagpapatunay ng SAFE Wallet PIN',
+    newPinPageTitle: 'SafeCoin Wallet Setup',
+    verifyPinPageTitle: 'Pagpapatunay ng SafeCoin Wallet PIN',
     setupNewPin: 'Gumawa ng bagong PIN',
     reenterPin: 'Lagay ulit ang PIN',
     pinsNotSimilar: 'Hindi tugma ang PINs na nailagay',
