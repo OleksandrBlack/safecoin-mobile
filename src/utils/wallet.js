@@ -1,6 +1,6 @@
 var bitcoinjs = require('bitcoinjs-lib')
 var bip32utils = require('bip32-utils')
-var zencashjs = require('zencashjs')
+var safecoinjs = require('safecoinjs')
 
 // Hierarchical Deterministic wallet
 function phraseToSecretItems (phraseStr) {
@@ -23,13 +23,13 @@ function phraseToSecretItems (phraseStr) {
     const pkWIF = chain.derive(x).keyPair.toWIF()
 
     // Private key
-    const privKey = zencashjs.address.WIFToPrivKey(pkWIF)
+    const privKey = safecoinjs.address.WIFToPrivKey(pkWIF)
 
     // Public key
-    const pubKey = zencashjs.address.privKeyToPubKey(privKey, true)
+    const pubKey = safecoinjs.address.privKeyToPubKey(privKey, true)
 
     // Address
-    const address = zencashjs.address.pubKeyToAddr(pubKey)
+    const address = safecoinjs.address.pubKeyToAddr(pubKey)
 
     return {
       address,

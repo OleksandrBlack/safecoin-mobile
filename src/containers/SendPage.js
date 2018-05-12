@@ -17,7 +17,7 @@ import {
   ListHeader
 } from 'react-onsenui'
 
-import zencashjs from 'zencashjs'
+import safecoinjs from 'safecoinjs'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -84,7 +84,7 @@ class SendPage extends React.Component {
     }
 
     this.handleQRScan = this.handleQRScan.bind(this)
-    this.handleSendZEN = this.handleSendZEN.bind(this)
+    this.handleSendSAFE = this.handleSendSAFE.bind(this)
     this.handleSendValueChange = this.handleSendValueChange.bind(this)
     this.handleSendCurrencyValueChange = this.handleSendCurrencyValueChange.bind(this)
     this.setProgressValue = this.setProgressValue.bind(this)
@@ -97,7 +97,7 @@ class SendPage extends React.Component {
   }
 
   // Handles conversion between
-  // zen and fiat and sets sendValue
+  // safe and fiat and sets sendValue
   handleSendValueChange (e) {
     const str = e.target.value
     const sendVal = parseFloat(str)
@@ -221,7 +221,7 @@ class SendPage extends React.Component {
     }.bind(this))
   }
 
-  handleSendZEN () {
+  handleSendSAFE () {
     // Language stuff
     const CUR_LANG = this.props.settings.language
 
@@ -235,10 +235,10 @@ class SendPage extends React.Component {
     const satoshisToSend = Math.round(value * 100000000)
     const satoshisfeesToSend = Math.round(fee) * 2 // fees already in satoshis, multiply by 2 so faster tx confirmation
 
-    // Reset zen send progress
+    // Reset safe send progress
     this.setProgressValue(1)
 
-    // Reset zen send progress
+    // Reset safe send progress
     // Alert messages too
     var errString = ''
 
@@ -271,7 +271,7 @@ class SendPage extends React.Component {
     }
 
     // Private key
-    const senderPrivateKey = zencashjs.address.WIFToPrivKey(this.props.context.privateKey)
+    const senderPrivateKey = safecoinjs.address.WIFToPrivKey(this.props.context.privateKey)
 
     // Get previous transactions
     const prevTxURL = urlAppend(this.props.settings.insightAPI, 'addr/') + senderAddress + '/utxo'
@@ -330,7 +330,7 @@ class SendPage extends React.Component {
                 // If we don't have enough address
                 // fail and tell user
                 if (satoshisSoFar < satoshisToSend + satoshisfeesToSend) {
-                  alert(TRANSLATIONS[CUR_LANG].SendPage.notEnoughZEN)
+                  alert(TRANSLATIONS[CUR_LANG].SendPage.notEnoughSAFE)
                   this.setProgressValue(0)
                   return
                 }
@@ -347,15 +347,15 @@ class SendPage extends React.Component {
                 }
 
                 // Create transaction
-                var txObj = zencashjs.transaction.createRawTx(history, recipients, blockHeight, blockHash)
+                var txObj = safecoinjs.transaction.createRawTx(history, recipients, blockHeight, blockHash)
 
                 // Sign each history transcation
                 for (var j = 0; j < history.length; j++) {
-                  txObj = zencashjs.transaction.signTx(txObj, j, senderPrivateKey, true)
+                  txObj = safecoinjs.transaction.signTx(txObj, j, senderPrivateKey, true)
                 }
 
                 // Convert it to hex string
-                const txHexString = zencashjs.transaction.serializeTx(txObj)
+                const txHexString = safecoinjs.transaction.serializeTx(txObj)
 
                 // Post it to the api
                 axios.post(sendRawTxURL,
@@ -529,7 +529,7 @@ class SendPage extends React.Component {
                     <span style={{ fontSize: '12px', color: '#7f8c8d' }}>
                       {balanceLang}:&nbsp;
                       {prettyFormatPrices(this.props.context.value)}&nbsp;
-                    ZEN
+                    SAFE
                     </span>
                     <Input
                       onChange={this.handleSendValueChange}
@@ -537,7 +537,7 @@ class SendPage extends React.Component {
                       placeholder={amountLang}
                       style={{ width: '100%' }}
                     /><br />
-                    ZEN
+                    SAFE
                   </ons-col>
                   <ons-col width={'10%'}>
                     <br />
@@ -590,7 +590,7 @@ class SendPage extends React.Component {
                   <ons-col width={'5%'}></ons-col>
                   <ons-col width={'47.5%'}>
                     <Button
-                      onClick={() => this.handleSendZEN()}
+                      onClick={() => this.handleSendSAFE()}
                       disabled={!this.state.confirmSend || (this.state.progressValue > 0)}
                       style={{ width: '100%', height: '50px', paddingTop: '7px' }}>{sendLang}</Button>
                   </ons-col>

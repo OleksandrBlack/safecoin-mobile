@@ -1,6 +1,6 @@
-# ZENCash Mobile
+# SafeCoin Mobile
 
-ZENCash mobile app built using Onsen UI, Redux, React and Webpack.
+SafeCoin mobile app built using Onsen UI, Redux, React and Webpack.
 
 Use node v6.11.X
 
@@ -19,7 +19,7 @@ cordova run [android | ios]
 
 1. Icons
 
-Icons are a bit of a bitch to setup for iOS. Make sure you've added the ios platform to cordova, and copy the folder `./assets/img/ios/AppIcon.appiconset` to `./platforms/ios/ZEN\ Wallet/Images.xcassets`. Remove the folder `AppIcon.appiconset` if it exists in `./platforms/ios/ZEN\ Wallet/Images.xcassets`.
+Icons are a bit of a bitch to setup for iOS. Make sure you've added the ios platform to cordova, and copy the folder `./assets/img/ios/AppIcon.appiconset` to `./platforms/ios/SAFE\ Wallet/Images.xcassets`. Remove the folder `AppIcon.appiconset` if it exists in `./platforms/ios/SAFE\ Wallet/Images.xcassets`.
 
 2. `.ipa` files (using it on a real iPhone)
 

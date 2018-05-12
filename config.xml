@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.zensystem.zencashwallet" version="0.0.13" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ZEN Wallet</name>
+<widget id="org.safecoin.safecoinwallet" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>SafeCoin Wallet</name>
     <description>
-        ZEN Wallet
+        SafeCoin Wallet
     </description>
     <author email="kendricktan0814@gmail.com" href="https://kndrck.co">
         Kendrick Tan
@@ -30,7 +30,7 @@
     </feature>
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <hook src="./scripts/build.sh" type="before_prepare" />
-    <icon src="./assets/img/zencash.png" />
+    <icon src="./assets/img/safecoin.png" />
     <allow-navigation href="http://*/*" />
     <allow-navigation href="https://*/*" />
     <allow-navigation href="data:*" />

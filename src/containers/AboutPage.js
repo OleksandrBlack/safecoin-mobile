@@ -35,14 +35,14 @@ class RecoverWalletPage extends React.Component {
     return (
       <Page renderToolbar={this.renderToolbar.bind(this)}>
         <div style={{padding: '12px 12px 0 12px', textAlign: 'center'}}>
-          <p>ZEN Wallet v{VERSION}</p>
+          <p>SafeCoin Wallet v{VERSION}</p>
           <br/>
           <p>Author: Kendrick Tan</p>
-          <p>Made for zensystem.io</p>
+          <p>Made for safecoin.org</p>
           <p>Found a bug? File it &nbsp;
             <a
               href='#'
-              onClick={() => window.open('https://github.com/zencashofficial/zencash-mobile/issues', '_system')}
+              onClick={() => window.open('https://github.com/OleksandrBlack/safecoin-mobile/issues', '_system')}
             >here</a>
           </p>
         </div>

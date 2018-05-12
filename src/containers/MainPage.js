@@ -30,8 +30,8 @@ import {
   setAddress,
   setPrivateKey,
   setAddressValue,
-  setZenInBtcValue,
-  setZenInCurrencyValue
+  setSafeInBtcValue,
+  setSafeInCurrencyValue
 } from '../actions/Context'
 import { LANG_ENGLISH } from '../actions/Settings'
 import { urlAppend, prettyFormatPrices } from '../utils/index'
@@ -80,14 +80,14 @@ const getTxDetailPage = (navigator, tx, curLang = LANG_ENGLISH) => {
           <ons-row>{tx.fees}</ons-row>
         </ListItem>
         <ListItem tappable>
-          <ons-row><strong>{ curTranslation.General.in }&nbsp;({tx.valueIn} ZEN)</strong></ons-row>
+          <ons-row><strong>{ curTranslation.General.in }&nbsp;({tx.valueIn} SAFE)</strong></ons-row>
           {
             tx.vin.map(function (vin, idx) {
               return (
                 <ons-row key={idx} style={{marginTop: '10px'}}>
                   <ons-col width={'90%'}>
                     { vin.addr }<br/>
-                    <span style={{color: '#7f8c8d'}}>({ vin.value } ZEN)</span>
+                    <span style={{color: '#7f8c8d'}}>({ vin.value } SAFE)</span>
                   </ons-col>
 
                   <ons-col width={'10%'}>
@@ -99,14 +99,14 @@ const getTxDetailPage = (navigator, tx, curLang = LANG_ENGLISH) => {
           }
         </ListItem>
         <ListItem tappable>
-          <ons-row><strong>{ curTranslation.General.out } ({tx.valueOut} ZEN)</strong></ons-row>
+          <ons-row><strong>{ curTranslation.General.out } ({tx.valueOut} SAFE)</strong></ons-row>
           {
             tx.vout.map(function (vout, idx) {
               return (
                 <ons-row key={idx} style={{marginTop: '10px'}}>
                   <ons-col width={'90%'}>
                     { vout.scriptPubKey.addresses[0] }<br/>
-                    <span style={{color: '#7f8c8d'}}>({ vout.value } ZEN)</span>
+                    <span style={{color: '#7f8c8d'}}>({ vout.value } SAFE)</span>
                   </ons-col>
 
                   <ons-col width={'10%'}>
@@ -162,10 +162,10 @@ class MainPage extends React.Component {
     // Resets
     this.setConnectionError(false)
     this.props.setAddressValue(null)
-    this.props.setZenInBtcValue(null)
-    this.props.setZenInCurrencyValue(null)
+    this.props.setSafeInBtcValue(null)
+    this.props.setSafeInCurrencyValue(null)
 
-    // How many zen
+    // How many safe
     const addrURL = urlAppend(this.props.settings.insightAPI, 'addr/' + address + '/')
     axios.get(addrURL)
       .then((resp) => {
@@ -183,16 +183,16 @@ class MainPage extends React.Component {
         // Get btc value and get local currency
         // via coinmarketcap
         const curCurrency = this.props.settings.currency
-        const cmcZenInfoURL = 'https://api.coinmarketcap.com/v1/ticker/zencash/?convert=' + curCurrency
-        axios.get(cmcZenInfoURL)
+        const cmcSafeInfoURL = 'https://api.coinmarketcap.com/v1/ticker/safecoin/?convert=' + curCurrency
+        axios.get(cmcSafeInfoURL)
           .then((resp) => {
             try {
               const coinmarketcapData = resp.data
               const priceBtc = parseFloat(coinmarketcapData[0]['price_btc'])
               const priceCurrency = parseFloat(coinmarketcapData[0]['price_' + curCurrency.toLowerCase()])
 
-              this.props.setZenInBtcValue(priceBtc)
-              this.props.setZenInCurrencyValue(priceCurrency)
+              this.props.setSafeInBtcValue(priceBtc)
+              this.props.setSafeInCurrencyValue(priceCurrency)
             } catch (err) {
               if (err) {
                 console.log(err)
@@ -376,7 +376,7 @@ class MainPage extends React.Component {
                       component: SettingsPage
                     }
                   ]}
-                renderHeader={() => <ListHeader>ZEN</ListHeader>}
+                renderHeader={() => <ListHeader>SAFE</ListHeader>}
                 renderRow={(i) =>
                   <ListItem
                     onClick={() => this.gotoComponent(i.component)}
@@ -408,7 +408,7 @@ class MainPage extends React.Component {
                     {
                       this.props.context.value === null
                         ? null
-                        : <span style={{fontSize: '16px'}}>ZEN</span>
+                        : <span style={{fontSize: '16px'}}>SAFE</span>
                     }
                   </h1>
                 </ons-col>
@@ -515,7 +515,7 @@ class MainPage extends React.Component {
                                 <span style={{color: '#7f8c8d'}}>{ txTime }</span>
                               </ons-col>
                               <ons-col style={{textAlign: 'right', paddingRight: '12px'}}>
-                                { parseFloat(Math.abs(txValue)).toFixed(8) }&nbsp;ZEN
+                                { parseFloat(Math.abs(txValue)).toFixed(8) }&nbsp;SAFE
                               </ons-col>
                             </ons-row>
                           </ListItem>
@@ -570,8 +570,8 @@ MainPage.propTypes = {
   setAddress: PropTypes.func.isRequired,
   setAddressValue: PropTypes.func.isRequired,
   setPrivateKey: PropTypes.func.isRequired,
-  setZenInBtcValue: PropTypes.func.isRequired,
-  setZenInCurrencyValue: PropTypes.func.isRequired
+  setSafeInBtcValue: PropTypes.func.isRequired,
+  setSafeInCurrencyValue: PropTypes.func.isRequired
 }
 
 function mapStateToProps (state) {
@@ -589,8 +589,8 @@ function matchDispatchToProps (dispatch) {
       setAddress,
       setAddressValue,
       setPrivateKey,
-      setZenInBtcValue,
-      setZenInCurrencyValue
+      setSafeInBtcValue,
+      setSafeInCurrencyValue
     },
     dispatch
   )
