@@ -11,7 +11,7 @@ import {
 
 import TRANSLATIONS from '../translations'
 
-import SAFECASH_IMG from '../../assets/img/safecoin.png'
+import SAFECOIN_IMG from '../../assets/img/safecoin.png'
 
 class VerifyPinPage extends React.Component {
   constructor (props) {
@@ -71,7 +71,7 @@ class VerifyPinPage extends React.Component {
     return (
       <Page renderToolbar={this.props.renderToolbar || this.renderToolbar}>
         <div style={{padding: '25px 12px 0 12px', textAlign: 'center'}}>
-          <img src={SAFECASH_IMG} width='100'/>
+          <img src={SAFECOIN_IMG} width='100'/>
           <h2>{ enterYourPinLang }</h2>
           { this.state.invalidPin ? <h4 style={{color: '#e74c3c'}}>{ invalidPinLang }</h4> : null }
           <hr width='50%'/>

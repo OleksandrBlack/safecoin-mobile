@@ -13,7 +13,7 @@ import TRANSLATIONS from '../translations'
 
 import { setWalletPin } from '../actions/Settings'
 
-import SAFECASH_IMG from '../../assets/img/safecoin.png'
+import SAFECOIN_IMG from '../../assets/img/safecoin.png'
 
 class NewPinPage extends React.Component {
   constructor (props) {
@@ -93,7 +93,7 @@ class NewPinPage extends React.Component {
     return (
       <Page renderToolbar={this.props.renderToolbar || this.renderToolbar.bind(this)}>
         <div style={{padding: '25px 12px 0 12px', textAlign: 'center'}}>
-          <img src={SAFECASH_IMG} width='100'/>
+          <img src={SAFECOIN_IMG} width='100'/>
           <h2>{ this.state.firstEntry ? setupNewPinLang : reenterPinLang }</h2>
           { this.state.similarPin ? '' : <h4 style={{color: '#e74c3c'}}>{ pinsNotSimilarLang }</h4> }
           <hr width='50%'/>
