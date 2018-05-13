@@ -44,7 +44,7 @@ class RecoverWalletPage extends React.Component {
           <p>Found a bug? File it &nbsp;
             <a
               href='#'
-              onClick={() => window.open('https://github.com/OleksandrBlack/safecoin-mobile/issues', '_system')}
+              onClick={() => window.open('https://github.com/Fair-Exchange/safecoin-mobile/issues', '_system')}
             >here</a>
           </p>
         </div>
