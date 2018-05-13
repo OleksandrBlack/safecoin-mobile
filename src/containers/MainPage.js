@@ -387,11 +387,12 @@ class MainPage extends React.Component {
                 }
               />
 			  <div style={{padding: '12px 12px 0 12px', textAlign: 'center'}}>
-				<p>Express your gratitude for the wallet! &nbsp;
+				<p>Express your gratitude for the wallet!</p>
+				<p>Go to the &nbsp;
 					<a
 					href='#'
 					onClick={() => window.open('https://safe.lucky-mining.com.ua/', '_system')}
-					>Go to the Lucky-Mining pool.</a>
+					>Lucky-Mining pool.</a>
 				</p>
 			  </div>
             </Page>
