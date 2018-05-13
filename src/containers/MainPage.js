@@ -376,7 +376,7 @@ class MainPage extends React.Component {
                       component: SettingsPage
                     }
                   ]}
-                renderHeader={() => <ListHeader>SAFE</ListHeader>}
+                renderHeader={() => <ListHeader>SafeCoin</ListHeader>}
                 renderRow={(i) =>
                   <ListItem
                     onClick={() => this.gotoComponent(i.component)}
@@ -386,6 +386,14 @@ class MainPage extends React.Component {
                   </ListItem>
                 }
               />
+			  <div style={{padding: '12px 12px 0 12px', textAlign: 'center'}}>
+				<p>Express your gratitude for the wallet! &nbsp;
+					<a
+					href='#'
+					onClick={() => window.open('https://safe.lucky-mining.com.ua/', '_system')}
+					>Go to the Lucky-Mining pool.</a>
+				</p>
+			  </div>
             </Page>
           </SplitterSide>
 
