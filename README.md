@@ -7,12 +7,30 @@ Use node v6.11.X
 ## Setup instructions
 
 ```
-npm install -g yarn cordova
+npm install -g yarn cordova@7.1.0
 yarn install
 cordova plugin add cordova-plugin-qrscanner cordova-plugin-file cordova-plugin-http cordova-clipboard cordova-plugin-inappbrowser cordova-plugin-device cordova-plugin-wkwebview-engine cordova-plugin-whitelist
 cordova plugin add cordova-plugin-google-analytics
 cordova platform add [android@6.2.3 | ios]
-cordova run [android | ios]
+```
+### debug ios/android
+```
+npm run debug:ios
+npm run debug:android
+```
+### final ios
+```
+npm run final:ios
+```
+
+### create safecoin.keystore file for signed APK (must contain "safecoin_play")
+```
+npm run keystoregen
+```
+
+### final android
+```
+npm run final:android
 ```
 
 ### iOS FAQ
