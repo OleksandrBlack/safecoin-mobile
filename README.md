@@ -24,11 +24,11 @@ cordova run ios --release
 cordova run android --release
 ```
 
-### PART1 create safecoin.keystore file for signed APK
+#### Part1 create safecoin.keystore file for signed APK
 ```
 keytool -genkey -v -keystore ~/safecoin.keystore -alias safecoin_play -keyalg RSA -keysize 2048 -validity 10000
 ```
-#### PART2 Optional (PKCS12 format which is an industry standard format using)
+#### Part2 Optional (PKCS12 format which is an industry standard format using)
 ```
 keytool -importkeystore -srckeystore ~/safecoin.keystore -destkeystore ~/safecoin.keystore -deststoretype pkcs12
 ```
