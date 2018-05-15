@@ -15,22 +15,28 @@ cordova platform add [android@6.2.3 | ios]
 ```
 ### debug ios/android
 ```
-npm run debug:ios
-npm run debug:android
+cordova run android
+cordova run ios
 ```
-### final ios
+### final ios/android
 ```
-npm run final:ios
+cordova run ios --release
+cordova run android --release
 ```
 
 ### create safecoin.keystore file for signed APK (must contain "safecoin_play")
 ```
-npm run keystoregen
+keytool -genkey -v -keystore ~/safecoin.keystore -alias safecoin_play -keyalg RSA -keysize 2048 -validity 10000
 ```
 
-### final android
+### sign:android
 ```
-npm run final:android
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ~/safecoin.keystore -signedjar platforms/android/build/outputs/apk/android-release-signed.apk platforms/android/build/outputs/apk/android-release-unsigned.apk safecoin_play
+```
+
+### aligned:android
+```
+$ANDROID_HOME/build-tools/25.0.3/zipalign -v 4 platforms/android/build/outputs/apk/android-release-signed.apk platforms/android/build/outputs/apk/android-release-signed-aligned.apk
 ```
 
 ### iOS FAQ
