@@ -88,15 +88,6 @@
     "danielsogl-cordova-plugin-clipboard": "^1.0.2",
     "safecoinjs": "https://github.com/OleksandrBlack/safecoinjs.git"
   },
-  "scripts": {
-    "debug:ios": "cordova run ios",
-    "debug:android": "cordova run android",
-    "final:ios": "cordova run ios --release",
-    "final:android": "npm run run:release && npm run sign:android",
-    "run:release": "cordova run android --release",
-    "sign:android": "rm -f platforms/android/build/outputs/apk/android-release-signed-aligned.apk && jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ~/safecoin.keystore -signedjar platforms/android/build/outputs/apk/android-release-signed.apk platforms/android/build/outputs/apk/android-release-unsigned.apk safecoin_play && $ANDROID_HOME/build-tools/25.0.3/zipalign -v 4 platforms/android/build/outputs/apk/android-release-signed.apk platforms/android/build/outputs/apk/android-release-signed-aligned.apk",
-    "keystoregen": "rm -f ~/safecoin.keystore && keytool -genkey -v -keystore ~/safecoin.keystore -alias safecoin_play -keyalg RSA -keysize 2048 -validity 10000"
-  },
   "cordova": {
     "plugins": {
       "cordova-plugin-qrscanner": {},
