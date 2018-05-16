@@ -19,7 +19,7 @@
         <allow-intent href="market:*" />
 		<preference name="cordova-custom-config-autorestore" value="true" />
         <custom-preference name="android-minSdkVersion" value="19" />
-		<custom-config-file target="AndroidManifest.xml" parent="/manifest">
+		<custom-config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.READ_PHONE_STATE" tools:node="remove" />
         </custom-config-file>
     </platform>
