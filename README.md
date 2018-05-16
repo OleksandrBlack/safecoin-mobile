@@ -1,4 +1,4 @@
-# SafeCoin Mobile 
+# SafeCoin Mobile
 
 SafeCoin mobile app built using Onsen UI, Redux, React and Webpack.
 
