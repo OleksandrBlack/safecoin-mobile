@@ -74,7 +74,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "cordova-android": "^6.2.3",
+    "cordova-android": "^7.1.0",
     "cordova-clipboard": "^1.1.1",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^1.1.7",
@@ -86,6 +86,7 @@
     "cordova-plugin-whitelist": "^1.3.3",
     "cordova-plugin-wkwebview-engine": "^1.1.4",
     "danielsogl-cordova-plugin-clipboard": "^1.0.2",
+    "cordova-plugin-android-permissions": "^1.0.0",
     "safecoinjs": "https://github.com/OleksandrBlack/safecoinjs.git"
   },
   "cordova": {
