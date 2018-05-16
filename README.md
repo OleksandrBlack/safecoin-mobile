@@ -2,47 +2,35 @@
 
 SafeCoin mobile app built using Onsen UI, Redux, React and Webpack.
 
-Use node v7.10.1
+Use node v6.11.X
 
 ## Setup instructions
 
 ```
-nvm install v7.10.1
-nvm use v7.10.1
 npm install -g yarn cordova@7.1.0
 yarn install
 cordova plugin add cordova-plugin-qrscanner cordova-plugin-file cordova-plugin-http cordova-clipboard cordova-plugin-inappbrowser cordova-plugin-device cordova-plugin-wkwebview-engine cordova-plugin-whitelist
 cordova plugin add cordova-plugin-google-analytics
-cordova platform add [android@6.2.3 | ios]
+cordova platform add [android@7.1.0 | ios]
 ```
 ### debug ios/android
 ```
-cordova run android
-cordova run ios
+npm run debug:ios
+npm run debug:android
 ```
-### final ios/android
+### final ios
 ```
-cordova run ios --release
-cordova run android --release
-```
-
-#### Part1 create safecoin.keystore file for signed APK
-```
-keytool -genkey -v -keystore ~/safecoin.keystore -alias safecoin_play -keyalg RSA -keysize 2048 -validity 10000
-```
-#### Part2 Optional (PKCS12 format which is an industry standard format using)
-```
-keytool -importkeystore -srckeystore ~/safecoin.keystore -destkeystore ~/safecoin.keystore -deststoretype pkcs12
+npm run final:ios
 ```
 
-### sign:android
+### create safecoin.keystore file for signed APK (must contain "safecoin_play")
 ```
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ~/safecoin.keystore -signedjar platforms/android/build/outputs/apk/android-release-signed.apk platforms/android/build/outputs/apk/android-release-unsigned.apk safecoin_play
+npm run keystoregen
 ```
 
-### aligned:android
+### final android
 ```
-$ANDROID_HOME/build-tools/25.0.3/zipalign -v 4 platforms/android/build/outputs/apk/android-release-signed.apk platforms/android/build/outputs/apk/android-release-signed-aligned.apk
+npm run final:android
 ```
 
 ### iOS FAQ
