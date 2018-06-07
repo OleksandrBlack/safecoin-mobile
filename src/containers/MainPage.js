@@ -189,7 +189,7 @@ class MainPage extends React.Component {
           .then((resp) => {
             try {
               const SafeTradeData = resp.data
-              const priceBtc = parseFloat(SafeTradeData.safebtc.ticker.last)
+              const priceBtc = parseFloat(SafeTradeData['safebtc']['ticker']['last'])
               this.props.setSafeInBtcValue(priceBtc)
             } catch (err) {
               if (err) {
@@ -208,12 +208,12 @@ class MainPage extends React.Component {
           })
 		
         const curCurrency = this.props.settings.currency
-        const tickersSafeTradeURL = 'https://safe.trade/api/v2/tickers/'
+        const tickersSafeTradeURL = 'https://safe.trade/api/v2/tickers/' + curCurrency
         axios.get(tickersSafeTradeURL)
           .then((resp) => {
             try {
               const SafeTradeTickersData = resp.data
-              const priceCurrency = parseFloat(SafeTradeTickersData + [curCurrency.toLowerCase()] + ['ticker']['last'])
+              const priceCurrency = parseFloat(SafeTradeTickersData['ticker']['last'])
 
               this.props.setSafeInCurrencyValue(priceCurrency)
             } catch (err) {
