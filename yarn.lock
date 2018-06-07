@@ -6293,9 +6293,9 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-safecoinjs@^1.0.0:
-  version "1.0.0"
-  resolved "https://github.com/OleksandrBlack/safecoinjs/archive/1.0.0.tar.gz"
+safecoinjs@^1.0.3:
+  version "1.0.3"
+  resolved "https://github.com/OleksandrBlack/safecoinjs/archive/1.0.3.tar.gz"
   dependencies:
     babel-cli "^6.24.1"
     babel-eslint "^8.0.2"
