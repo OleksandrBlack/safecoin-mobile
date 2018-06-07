@@ -1,12 +1,16 @@
---------------------------
+cordova platform add android@6.2.3
+---------------------------------------------------
 in
 /platforms/android/AndroidManifest.xml
 add
 
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
---------------------------
+---------------------------------------------------
+todo https://stackoverflow.com/questions/49839322/errorfailed-to-resolve-android-arch-corecommon1-1-0/50563942
 in 
 /platforms/android/build.gradle
 line 24 and 41
 add
 		maven { url "https://maven.google.com" }
+----------------------------------------------------
+cordova run android --release
