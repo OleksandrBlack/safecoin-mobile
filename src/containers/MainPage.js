@@ -182,17 +182,17 @@ class MainPage extends React.Component {
 
         // Get btc value and get local currency
         // via coinmarketcap
-        const curCurrency = this.props.settings.currency
-        const cmcSafeInfoURL = 'https://api.coinmarketcap.com/v1/ticker/safecoin/?convert=' + curCurrency
+
+        const cmcSafeInfoURL = 'https://safe.trade/api/v2/tickers/'
         axios.get(cmcSafeInfoURL)
           .then((resp) => {
             try {
               const coinmarketcapData = resp.data
-              const priceBtc = parseFloat(coinmarketcapData[0]['price_btc'])
-              const priceCurrency = parseFloat(coinmarketcapData[0]['price_' + curCurrency.toLowerCase()])
+              const priceBtc = parseFloat(coinmarketcapData.safebtc.ticker.last)
+
 
               this.props.setSafeInBtcValue(priceBtc)
-              this.props.setSafeInCurrencyValue(priceCurrency)
+
             } catch (err) {
               if (err) {
                 console.log(err)
