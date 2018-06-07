@@ -1,9 +1,10 @@
 // Currencies
 export const CURRENCY_safebtcz = 'safebtcz'
-
+export const CURRENCY_safebtcz = 'safeltc'
 
 export const CURRENCIES = [
-  CURRENCY_safebtcz
+  CURRENCY_safebtcz,
+  CURRENCY_safeltc
 ]
 
 // Languages
