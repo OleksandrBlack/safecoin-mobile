@@ -19,7 +19,7 @@
         <allow-intent href="market:*" />
         <custom-preference name="android-minSdkVersion" value="19" />
     </platform>
-	<config-file target="AndroidManifest.xml" parent="/platforms/android/app/src/main">
+	<config-file target="AndroidManifest.xml" parent="/*">
         <uses-permission android:name="android.permission.READ_PHONE_STATE" tools:node="remove" />
     </config-file>
     <platform name="ios">
