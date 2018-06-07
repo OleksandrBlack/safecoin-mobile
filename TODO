@@ -1,2 +1,9 @@
-src\containers\MainPage.js
-line 186
+in
+/platforms/android/app/src/main/AndroidManifest.xml
+add
+
+<manifest ...
+    xmlns:tools="http://schemas.android.com/tools"
+    ... >
+
+<uses-permission android:name="android.permission.READ_PHONE_STATE" tools:node="remove" />
