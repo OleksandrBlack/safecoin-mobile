@@ -1,3 +1,4 @@
+--------------------------
 in
 /platforms/android/app/src/main/AndroidManifest.xml
 add
@@ -7,3 +8,9 @@ add
     ... >
 
 <uses-permission android:name="android.permission.READ_PHONE_STATE" tools:node="remove" />
+--------------------------
+in 
+/platforms/android/build.gradle
+line 23 and 39
+add
+		maven { url "https://maven.google.com" }
