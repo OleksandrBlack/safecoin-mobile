@@ -183,7 +183,7 @@ class MainPage extends React.Component {
 		
 		
         // Get btc value and get local currency
-        // via coinmarketcap
+        // via Safe.Trade
         const btcSafeTradeURL = 'https://safe.trade/api/v2/tickers/'
         axios.get(btcSafeTradeURL)
           .then((resp) => {
