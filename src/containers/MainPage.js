@@ -180,18 +180,41 @@ class MainPage extends React.Component {
           this.setConnectionError(true)
         }
 
+		
+		
         // Get btc value and get local currency
-        // via coinmarketcap
-        const curCurrency = this.props.settings.currency
-        const cmcSafeInfoURL = 'https://api.coinmarketcap.com/v1/ticker/safecoin/?convert=' + curCurrency
-        axios.get(cmcSafeInfoURL)
+        // via Safe.Trade
+        const btcSafeTradeURL = 'https://safe.trade/api/v2/tickers/'
+        axios.get(btcSafeTradeURL)
           .then((resp) => {
             try {
-              const coinmarketcapData = resp.data
-              const priceBtc = parseFloat(coinmarketcapData[0]['price_btc'])
-              const priceCurrency = parseFloat(coinmarketcapData[0]['price_' + curCurrency.toLowerCase()])
-
+              const SafeTradeData = resp.data
+              const priceBtc = parseFloat(SafeTradeData['safebtc']['ticker']['last'])
               this.props.setSafeInBtcValue(priceBtc)
+            } catch (err) {
+              if (err) {
+                console.log(err)
+              }
+              this.setConnectionError(true)
+            }
+          }, (err) => {
+            if (err) {
+              // If there's an error here
+              // I think it's safe to assume that
+              // there is no connection
+              console.log(err)
+            }
+            this.setConnectionError(true)
+          })
+		
+        const curCurrency = this.props.settings.currency
+        const tickersSafeTradeURL = 'https://safe.trade/api/v2/tickers/' + curCurrency
+        axios.get(tickersSafeTradeURL)
+          .then((resp) => {
+            try {
+              const SafeTradeTickersData = resp.data
+              const priceCurrency = parseFloat(SafeTradeTickersData['ticker']['last'])
+
               this.props.setSafeInCurrencyValue(priceCurrency)
             } catch (err) {
               if (err) {
