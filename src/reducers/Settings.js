@@ -4,7 +4,7 @@ import 'babel-polyfill'
 
 import {
   LANG_ENGLISH,
-  CURRENCY_safebtc,
+  CURRENCY_USD,
   SET_LANGUAGE,
   SET_CURRENCY,
   SET_WALLET_PIN,
@@ -15,7 +15,7 @@ const initialSettings = {
   insightAPI: 'https://explorer.safecoin.org/api/',
   explorerURL: 'https://explorer.safecoin.org/',
   language: LANG_ENGLISH,
-  currency: CURRENCY_safebtc,
+  currency: CURRENCY_USD,
   pin: null
 }
 
