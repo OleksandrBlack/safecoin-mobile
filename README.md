@@ -9,11 +9,11 @@ Use node v7.10.1
 ```
 nvm install v7.10.1
 nvm use v7.10.1
-npm install -g yarn cordova
+npm install -g yarn cordova@7.1.0
 yarn install
 cordova plugin add cordova-plugin-qrscanner cordova-plugin-file cordova-plugin-http cordova-clipboard cordova-plugin-inappbrowser cordova-plugin-device cordova-plugin-wkwebview-engine cordova-plugin-whitelist
 cordova plugin add cordova-plugin-google-analytics
-cordova platform add [android | ios]
+cordova platform add [android@6.2.3 | ios]
 ```
 ### debug ios/android
 ```
@@ -37,12 +37,12 @@ keytool -importkeystore -srckeystore ~/safecoin.keystore -destkeystore ~/safecoi
 
 ### sign:android
 ```
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ~/safecoin.keystore -signedjar platforms/android/build/outputs/apk/release/android-release-signed.apk platforms/android/build/outputs/release/apk/android-release-unsigned.apk safecoin_play
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ~/safecoin.keystore -signedjar platforms/android/build/outputs/apk/android-release-signed.apk platforms/android/build/outputs/apk/android-release-unsigned.apk safecoin_play
 ```
 
 ### aligned:android
 ```
-$ANDROID_HOME/build-tools/25.0.3/zipalign -v 4 platforms/android/build/outputs/apk/release/android-release-signed.apk platforms/android/build/outputs/apk/release/android-release-signed-aligned.apk
+$ANDROID_HOME/build-tools/25.0.3/zipalign -v 4 platforms/android/build/outputs/apk/android-release-signed.apk platforms/android/build/outputs/apk/android-release-signed-aligned.apk
 ```
 
 ### iOS FAQ
