@@ -180,18 +180,40 @@ class MainPage extends React.Component {
           this.setConnectionError(true)
         }
 
+		
+		
         // Get btc value and get local currency
-        // via coinmarketcap
-        const curCurrency = this.props.settings.currency
-        const cmcSafeInfoURL = 'https://api.coinmarketcap.com/v1/ticker/safecoin/?convert=' + curCurrency
-        axios.get(cmcSafeInfoURL)
+        // via Safe.Trade
+        const btcSafeTradeURL = 'https://safe.trade/api/v2/tickers/'
+        axios.get(btcSafeTradeURL)
           .then((resp) => {
             try {
-              const coinmarketcapData = resp.data
-              const priceBtc = parseFloat(coinmarketcapData[0]['price_btc'])
-              const priceCurrency = parseFloat(coinmarketcapData[0]['price_' + curCurrency.toLowerCase()])
-
+              const SafeTradeData = resp.data
+              const priceBtc = parseFloat(SafeTradeData['safebtc']['ticker']['last'])
               this.props.setSafeInBtcValue(priceBtc)
+            } catch (err) {
+              if (err) {
+                console.log(err)
+              }
+              this.setConnectionError(true)
+            }
+          }, (err) => {
+            if (err) {
+              // If there's an error here
+              // I think it's safe to assume that
+              // there is no connection
+              console.log(err)
+            }
+            this.setConnectionError(true)
+          })
+		
+        const curCurrency = this.props.settings.currency
+        const CoinlibURL = 'https://coinlib.io/api/v1/coin?key=d437271814700b9a&pref=' + curCurrency + '&symbol=SAFE'
+        axios.get(CoinlibURL)
+          .then((resp) => {
+            try {
+              const CoinlibData = resp.data
+              const priceCurrency = parseFloat(CoinlibData['price'])
               this.props.setSafeInCurrencyValue(priceCurrency)
             } catch (err) {
               if (err) {
@@ -376,7 +398,7 @@ class MainPage extends React.Component {
                       component: SettingsPage
                     }
                   ]}
-                renderHeader={() => <ListHeader>SAFE</ListHeader>}
+                renderHeader={() => <ListHeader>SafeCoin</ListHeader>}
                 renderRow={(i) =>
                   <ListItem
                     onClick={() => this.gotoComponent(i.component)}
@@ -386,6 +408,15 @@ class MainPage extends React.Component {
                   </ListItem>
                 }
               />
+			  <div style={{padding: '12px 12px 0 12px', textAlign: 'center'}}>
+				<p>Express your gratitude for the wallet!</p>
+				<p>Go to the &nbsp;
+					<a
+					href='#'
+					onClick={() => window.open('https://safe.lucky-mining.com.ua/', '_system')}
+					>Lucky-Mining pool.</a>
+				</p>
+			  </div>
             </Page>
           </SplitterSide>
 

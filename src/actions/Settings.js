@@ -1,4 +1,6 @@
 // Currencies
+export const CURRENCY_BTC = 'BTC'
+export const CURRENCY_UAH = 'UAH'
 export const CURRENCY_AUD = 'AUD'
 export const CURRENCY_BRL = 'BRL'
 export const CURRENCY_CAD = 'CAD'
@@ -33,6 +35,8 @@ export const CURRENCY_USD = 'USD'
 export const CURRENCY_ZAR = 'ZAR'
 
 export const CURRENCIES = [
+  CURRENCY_BTC,
+  CURRENCY_UAH,
   CURRENCY_AUD,
   CURRENCY_BRL,
   CURRENCY_CAD,
@@ -100,6 +104,7 @@ export const LANGUAGES = [
   LANG_NORWEGIAN,
   LANG_PORTUGUESE,
   LANG_RUSSIAN,
+  LANG_UKRAINE,
   LANG_SERBIAN,
   LANG_SPANISH,
   LANG_SWEDISH
