@@ -5189,9 +5189,9 @@ safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, s
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
-"safecoinjs@https://github.com/Fair-Exchange/safecoinjs.git":
-  version "1.0.3"
-  resolved "https://github.com/Fair-Exchange/safecoinjs.git#641822d457da38336dc0ee0cc1b51a8fccc96195"
+"safecoinjs@https://github.com/Fair-Exchange/safecoinjs.git#1.0.1-1":
+  version "1.0.1"
+  resolved "https://github.com/Fair-Exchange/safecoinjs.git#a55c361bb7e2ec99c1c33e35dc1c83366d17fa33"
   dependencies:
     babel-cli "^6.24.1"
     babel-eslint "^8.0.2"

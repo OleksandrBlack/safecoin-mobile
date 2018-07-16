@@ -180,40 +180,19 @@ class MainPage extends React.Component {
           this.setConnectionError(true)
         }
 
-		
-		
+
         // Get btc value and get local currency
-        // via Safe.Trade
-        const btcSafeTradeURL = 'https://safe.trade/api/v2/tickers/'
-        axios.get(btcSafeTradeURL)
-          .then((resp) => {
-            try {
-              const SafeTradeData = resp.data
-              const priceBtc = parseFloat(SafeTradeData['safebtc']['ticker']['last'])
-              this.props.setSafeInBtcValue(priceBtc)
-            } catch (err) {
-              if (err) {
-                console.log(err)
-              }
-              this.setConnectionError(true)
-            }
-          }, (err) => {
-            if (err) {
-              // If there's an error here
-              // I think it's safe to assume that
-              // there is no connection
-              console.log(err)
-            }
-            this.setConnectionError(true)
-          })
-		
+        // via coinlib.io
         const curCurrency = this.props.settings.currency
-        const CoinlibURL = 'https://coinlib.io/api/v1/coin?key=d437271814700b9a&pref=' + curCurrency + '&symbol=SAFE'
-        axios.get(CoinlibURL)
+        const coinlibSafeInfoURL = 'https://coinlib.io/api/v1/coin?key=d437271814700b9a&pref=' + curCurrency + '&symbol=SAFE'
+        axios.get(coinlibSafeInfoURL)
           .then((resp) => {
             try {
-              const CoinlibData = resp.data
-              const priceCurrency = parseFloat(CoinlibData['price'])
+              const coinlibData = resp.data
+              const priceBtc = parseFloat(coinlibData['markets'][0]['price'])
+              const priceCurrency = parseFloat(coinlibData['price'])
+
+              this.props.setSafeInBtcValue(priceBtc)
               this.props.setSafeInCurrencyValue(priceCurrency)
             } catch (err) {
               if (err) {
