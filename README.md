@@ -7,6 +7,13 @@ Use node v7.10.1
 ## Setup instructions
 
 ```
+sudo apt-get install default-jdk gradle
+wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+unzip sdk-tools-linux-4333796.zip
+./tools/bin/sdkmanager --install "system-images;android-27;google_apis;x86"
+./tools/bin/sdkmanager "build-tools;27.0.3" "platforms;android-27" "tools"
+export ANDROID_HOME="/home/your-username/tools/"
+
 nvm install v7.10.1
 nvm use v7.10.1
 npm install -g yarn cordova@7.1.0

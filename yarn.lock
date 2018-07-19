@@ -1664,9 +1664,9 @@ cordova-android@^6.2.3:
     q "^1.4.1"
     shelljs "^0.5.3"
 
-cordova-clipboard@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/cordova-clipboard/-/cordova-clipboard-1.1.1.tgz#8767a8c138ae840c98d20a2e0a1871ed6f4e1d0a"
+cordova-clipboard@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/cordova-clipboard/-/cordova-clipboard-1.2.1.tgz#130624356583f749abed23b380724e1d273051c8"
 
 cordova-common@^2.1.0:
   version "2.2.5"
@@ -1708,11 +1708,11 @@ cordova-plugin-inappbrowser@^1.7.2:
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/cordova-plugin-inappbrowser/-/cordova-plugin-inappbrowser-1.7.2.tgz#64763495be87eb2e7adb1a08f0209b96ea5ceee0"
 
-cordova-plugin-qrscanner@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/cordova-plugin-qrscanner/-/cordova-plugin-qrscanner-2.5.0.tgz#6d6ba13d0bb49e370daa4958d77c8aa76d8ca356"
+cordova-plugin-qrscanner@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/cordova-plugin-qrscanner/-/cordova-plugin-qrscanner-2.6.0.tgz#e981be29d024cb37c11e28bbee87ba2544a29e2a"
   dependencies:
-    qrcode-reader "^0.2.2"
+    qrcode-reader "^1.0.4"
     webrtc-adapter "^3.1.4"
 
 cordova-plugin-whitelist@^1.3.3:
@@ -4776,9 +4776,9 @@ qr.js@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/qr.js/-/qr.js-0.0.0.tgz#cace86386f59a0db8050fa90d9b6b0e88a1e364f"
 
-qrcode-reader@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/qrcode-reader/-/qrcode-reader-0.2.2.tgz#1f202f2461d0eeed85e8794a6f44fe418dda7f87"
+qrcode-reader@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/qrcode-reader/-/qrcode-reader-1.0.4.tgz#95d9bb9e8130800361a96cb5a43124ad1d9e06b8"
 
 qrcode.react@^0.7.1:
   version "0.7.1"
@@ -5193,38 +5193,17 @@ safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, s
   version "1.0.1"
   resolved "https://github.com/Fair-Exchange/safecoinjs.git#a55c361bb7e2ec99c1c33e35dc1c83366d17fa33"
   dependencies:
-    babel-cli "^6.24.1"
-    babel-eslint "^8.0.2"
-    babel-loader "^7.1.2"
-    babel-preset-es2015 "^6.24.1"
-    babel-preset-flow "^6.23.0"
-    babel-preset-stage-2 "^6.24.1"
+    bigi "^1.4.2"
     bs58 "^4.0.1"
     bs58check "^2.0.2"
-    chai "^4.1.0"
     create-hash "^1.1.3"
     create-hmac "^1.1.6"
-    elliptic "^6.4.0"
-    eslint "^4.10.0"
-    eslint-config-standard "^10.2.1"
-    eslint-loader "^1.9.0"
-    eslint-plugin-flowtype "^2.39.1"
-    eslint-plugin-import "^2.8.0"
-    eslint-plugin-node "^5.2.1"
-    eslint-plugin-promise "^3.6.0"
-    eslint-plugin-standard "^3.0.1"
-    flow-bin "^0.51.0"
     int64-buffer "^0.1.9"
+    libsodium-sumo "^0.5.2"
     libsodium-wrappers-sumo "^0.5.2"
-    mocha "^3.4.2"
-    mocha-webpack "^1.0.1"
-    pushdata-bitcoin "^1.0.1"
     safe-buffer "^5.1.1"
     secp256k1 "^3.3.0"
-    varint "^5.0.0"
     varuint-bitcoin "^1.0.4"
-    webpack "^3.8.1"
-    yargs "^10.0.3"
 
 sax@0.3.5:
   version "0.3.5"
