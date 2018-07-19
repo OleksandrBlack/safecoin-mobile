@@ -12,6 +12,8 @@ wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
 unzip sdk-tools-linux-4333796.zip
 ./tools/bin/sdkmanager --install "system-images;android-27;google_apis;x86"
 ./tools/bin/sdkmanager "build-tools;27.0.3" "platforms;android-27" "tools"
+./tools/bin/sdkmanager "platforms;android-25"
+./tools/bin/sdkmanager "build-tools;25.0.3"
 export ANDROID_HOME="/home/your-username/tools/"
 
 nvm install v7.10.1
