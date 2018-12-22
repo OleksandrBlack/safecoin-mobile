@@ -74,8 +74,11 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "bitgo-utxo-lib": "git+https://github.com/zerocurrencycoin/bitgo-utxo-lib.git",
     "cordova-android": "^6.2.3",
     "cordova-clipboard": "^1.2.1",
+    "cordova-ios": "^4.5.5",
+    "cordova-plugin-add-swift-support": "^1.7.2",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-file": "^4.3.3",
@@ -98,6 +101,7 @@
       "cordova-plugin-device": {},
       "cordova-plugin-wkwebview-engine": {},
       "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
       "cordova-plugin-google-analytics": {}
     },
     "platforms": [

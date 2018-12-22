@@ -22,6 +22,7 @@ nvm install v7.10.1
 nvm use v7.10.1
 npm install -g yarn cordova@7.1.0
 yarn install
+
 cordova plugin add cordova-plugin-qrscanner cordova-plugin-file cordova-plugin-http cordova-clipboard cordova-plugin-inappbrowser cordova-plugin-device cordova-plugin-wkwebview-engine cordova-plugin-whitelist
 cordova plugin add cordova-plugin-google-analytics
 cordova platform add [android@6.2.3 | ios]
@@ -36,6 +37,9 @@ cordova run ios
 cordova run ios --release
 cordova run android --release
 ```
+=======
+cordova plugin add cordova-plugin-qrscanner cordova-plugin-file cordova-plugin-http cordova-clipboard cordova-plugin-inappbrowser cordova-plugin-device cordova-plugin-wkwebview-engine cordova-plugin-whitelist cordova-plugin-statusbar cordova-plugin-google-analytics@1.8.3
+
 
 #### Part1 create safecoin.keystore file for signed APK
 ```
@@ -54,6 +58,10 @@ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ~/safecoin.keys
 ### aligned:android
 ```
 $ANDROID_HOME/build-tools/27.0.3/zipalign -v 4 platforms/android/build/outputs/apk/android-release-signed.apk platforms/android/build/outputs/apk/android-release-signed-aligned.apk
+=======
+cordova plugin add cordova-plugin-splashscreen cordova-plugin-disable-ios11-statusbar
+cordova platform add ios
+cordova run ios
 ```
 
 ### iOS FAQ
