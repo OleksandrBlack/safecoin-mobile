@@ -365,23 +365,18 @@ class SendPage extends React.Component {
 
                 //add inputs
                 for (var j = 0; j < history.length; j++) {
-                  txObj = safecoinjs.transaction.signTx(txObj, j, senderPrivateKey, true)
-                }
-
-                // Convert it to hex string
-                const txHexString = safecoinjs.transaction.serializeTx(txObj)
                   txb.addInput(history[j].txid, history[j].vout)
                 }
 
                 //add outputs
                 for (var k = 0; k < recipients.length; k++) {
-                  var outputScript = bitcoinjs.address.toOutputScript(recipients[k].address,network)
+                  var outputScript = safecoinjs.address.toOutputScript(recipients[k].address,network)
                   txb.addOutput(outputScript, recipients[k].satoshis)
                 }
 
                 // Sign each history transcation
                 for (var l = 0; l < history.length; l++) {
-                  txb.sign(l,keyPair,'',bitcoinjs.Transaction.SIGHASH_SINGLE,history[l].satoshis,'')
+                  txb.sign(l,keyPair,'',safecoinjs.Transaction.SIGHASH_SINGLE,history[l].satoshis,'')
                 }
 
                 // Convert it to hex string
