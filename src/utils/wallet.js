@@ -35,7 +35,7 @@ function phraseToSecretItems (phraseStr) {
     // Address
     const address = safecoinjs.address.pubKeyToAddr(pubKey)
     //Get keyPair
-    const keyPair = safecoinjs.ECPair.fromWIF(pkWIF, network)
+    const keyPair = bitcoinjs.ECPair.fromWIF(pkWIF, network)
     //Get Address
    // const address = keyPair.getAddress()
 
