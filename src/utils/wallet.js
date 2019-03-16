@@ -37,7 +37,7 @@ function phraseToSecretItems (phraseStr) {
     //Get keyPair
     const keyPair = safecoinjs.ECPair.fromWIF(pkWIF, network)
     //Get Address
-    const address = keyPair.getAddress()
+   // const address = keyPair.getAddress()
 
     return {
       address,
