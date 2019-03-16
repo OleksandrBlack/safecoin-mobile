@@ -353,7 +353,7 @@ class SendPage extends React.Component {
                 // Create transaction
                 var txObj = safecoinjs.transaction.createRawTx(history, recipients, blockHeight, blockHash)
                 //Start building transaction
-                let network = bitcoinjs.networks['zer']
+                let network = bitcoinjs.networks['safecoin']
                 var keyPair = bitcoinjs.ECPair.fromWIF(this.props.context.privateKey,network)
                 var txb = new bitcoinjs.TransactionBuilder(network)
 

@@ -74,7 +74,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
-    "bitgo-utxo-lib": "git+https://github.com/zerocurrencycoin/bitgo-utxo-lib.git",
+    "bitgo-utxo-lib": "git+https://github.com/Fair-Exchange/bitgo-utxo-lib-safecoin.git",
     "cordova-android": "^6.2.3",
     "cordova-clipboard": "^1.2.1",
     "cordova-ios": "^4.5.5",
