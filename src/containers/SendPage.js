@@ -234,7 +234,8 @@ class SendPage extends React.Component {
     // Convert how much we wanna send
     // to satoshis
     const satoshisToSend = Math.round(value * 100000000)
-    const satoshisfeesToSend = Math.round(fee) * 2 // fees already in satoshis, multiply by 2 so faster tx confirmation
+    const satoshisfeesToSend = 10000 //set static fee of 0.0001
+//    const satoshisfeesToSend = Math.round(fee) * 2 // fees already in satoshis, multiply by 2 so faster tx confirmation
 
     // Reset safe send progress
     this.setProgressValue(1)
