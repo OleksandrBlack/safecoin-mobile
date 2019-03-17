@@ -78,7 +78,7 @@ class SendPage extends React.Component {
       confirmSend: false,
       addressReceive: '',
       sendValue: 1,
-      sendFee: 0.000001,
+      sendFee: 0.0001,
       progressValue: 0,
       sendTxid: '',
       sendCurrencyValue: props.context.currencyValue
@@ -347,8 +347,6 @@ class SendPage extends React.Component {
                   }
                 }
 
-                // Create transaction
-                var txObj = bitcoinjs.transaction.createRawTx(history, recipients, blockHeight, blockHash)
                 //Start building transaction
                 let network = bitcoinjs.networks['safecoin']
                 var keyPair = bitcoinjs.ECPair.fromWIF(this.props.context.privateKey,network)
