@@ -1,6 +1,5 @@
 var bitcoinjs = require('bitgo-utxo-lib')
 var bip32utils = require('bip32-utils')
-var safecoinjs = require('safecoinjs')
 
 // Hierarchical Deterministic wallet
 function phraseToSecretItems (phraseStr) {
@@ -26,18 +25,11 @@ function phraseToSecretItems (phraseStr) {
     // Get private key (WIF)
     const pkWIF = chain.derive(x).keyPair.toWIF()
 
-    // Private key
-    const privKey = safecoinjs.address.WIFToPrivKey(pkWIF)
 
-    // Public key
-    const pubKey = safecoinjs.address.privKeyToPubKey(privKey, true)
-
-    // Address
-    const address = safecoinjs.address.pubKeyToAddr(pubKey)
     //Get keyPair
     const keyPair = bitcoinjs.ECPair.fromWIF(pkWIF, network)
     //Get Address
-   // const address = keyPair.getAddress()
+    const address = keyPair.getAddress()
 
     return {
       address,
