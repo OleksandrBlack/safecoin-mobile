@@ -540,7 +540,7 @@ class SendPage extends React.Component {
                   <Button
                     modifier='quiet'
                     onClick={
-                      () => this.handleSendValueChange({ target: { value: (this.props.context.value - (this.state.sendFee / 100000000)).toPrecision(8) } })}
+                      () => this.handleSendValueChange({ target: { value: (this.props.context.value - (this.state.sendFee)).toPrecision(8) } })}
                   >
                     {maxLang}
                   </Button>
