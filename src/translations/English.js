@@ -37,7 +37,7 @@ export const ENGLISH_TRANSLATION: TRANSLATION_OBJ = {
     amount: 'Amount',
     max: 'Max',
     send: 'Send',
-    txSuccessful: 'Transcation successful! Click here to see your transaction.',
+    txSuccessful: 'Transacation successful! Click here to see your transaction.',
     confirmSend: 'I want to send these SAFE',
     invalidAddress: 'Invalid `To Address` Only transparent addresses are supported at this point in time.',
     invalidAmount: 'Invalid `Amount`.',
