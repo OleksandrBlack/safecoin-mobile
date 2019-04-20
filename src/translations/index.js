@@ -12,7 +12,7 @@ import {
   LANG_NORWEGIAN,
   LANG_PORTUGUESE,
   LANG_RUSSIAN,
-  LANG_UKRAINE,
+  LANG_UKRAINIAN,
   LANG_SERBIAN,
   LANG_SPANISH,
   LANG_SWEDISH
@@ -31,7 +31,7 @@ import { ITALIAN_TRANSLATION } from './Italian.js'
 import { NORWEGIAN_TRANSLATION } from './Norwegian.js'
 import { PORTUGUESE_TRANSLATION } from './Portuguese.js'
 import { RUSSIAN_TRANSLATION } from './Russian.js'
-import { UKRAINE_TRANSLATION } from './Ukraine.js'
+import { UKRAINIAN_TRANSLATION } from './Ukrainian.js'
 import { SERBIAN_TRANSLATION } from './Serbian.js'
 import { SPANISH_TRANSLATION } from './Spanish.js'
 import { SWEDISH_TRANSLATION } from './Swedish.js'
@@ -51,7 +51,7 @@ translations[LANG_ITALIAN] = ITALIAN_TRANSLATION
 translations[LANG_NORWEGIAN] = NORWEGIAN_TRANSLATION
 translations[LANG_PORTUGUESE] = PORTUGUESE_TRANSLATION
 translations[LANG_RUSSIAN] = RUSSIAN_TRANSLATION
-translations[LANG_UKRAINE] = UKRAINE_TRANSLATION
+translations[LANG_UKRAINE] = UKRAINIAN_TRANSLATION
 translations[LANG_SERBIAN] = SERBIAN_TRANSLATION
 translations[LANG_SPANISH] = SPANISH_TRANSLATION
 translations[LANG_SWEDISH] = SWEDISH_TRANSLATION

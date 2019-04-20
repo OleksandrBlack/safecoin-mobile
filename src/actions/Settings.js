@@ -24,6 +24,7 @@ export const CURRENCY_PHP = 'PHP'
 export const CURRENCY_PKR = 'PKR'
 export const CURRENCY_PLN = 'PLN'
 export const CURRENCY_RUB = 'RUB'
+export const CURRENCY_UAH = 'UAH'
 export const CURRENCY_SEK = 'SEK'
 export const CURRENCY_SGD = 'SGD'
 export const CURRENCY_THB = 'THB'
@@ -58,6 +59,7 @@ export const CURRENCIES = [
   CURRENCY_PKR,
   CURRENCY_PLN,
   CURRENCY_RUB,
+  CURRENCY_UAH,
   CURRENCY_SEK,
   CURRENCY_SGD,
   CURRENCY_THB,
@@ -81,7 +83,7 @@ export const LANG_ITALIAN = 'Italian'
 export const LANG_NORWEGIAN = 'Norwegian'
 export const LANG_PORTUGUESE = 'Portuguese'
 export const LANG_RUSSIAN = 'Russian'
-export const LANG_UKRAINE = 'Ukraine'
+export const LANG_UKRAINIAN = 'Ukrainian'
 export const LANG_SERBIAN = 'Serbian'
 export const LANG_SPANISH = 'Spanish'
 export const LANG_SWEDISH = 'Swedish'
@@ -100,6 +102,7 @@ export const LANGUAGES = [
   LANG_NORWEGIAN,
   LANG_PORTUGUESE,
   LANG_RUSSIAN,
+  LANG_UKRAINIAN,
   LANG_SERBIAN,
   LANG_SPANISH,
   LANG_SWEDISH

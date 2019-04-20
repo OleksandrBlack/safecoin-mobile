@@ -50,10 +50,10 @@ class SelectInsightPage extends React.Component {
             Preconfigured Nodes
           </ListHeader>
           <ListItem tappable onClick={() => this.props.setInsightAPI('https://explorer.safecoin.org/api/')}>
-            horizen.global
+            explorer.safecoin.org
           </ListItem>
           <ListItem tappable onClick={() => this.props.setInsightAPI('https://safe.safc.cc/api/')}>
-            explorer.zen-solutions.io
+            safe.safc.cc
           </ListItem>
         </List>
       </Page>

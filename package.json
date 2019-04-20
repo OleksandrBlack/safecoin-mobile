@@ -1,6 +1,6 @@
 {
   "name": "safecoin-mobile",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Mobile Wallet for Safecoin",
   "main": "index.js",
   "scripts": {
