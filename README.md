@@ -1,43 +1,42 @@
-# SafeCoin Mobile
+# Safecoin Mobile
 
-SafeCoin mobile app built using Onsen UI, Redux, React and Webpack.
+Safecoin mobile app built using Onsen UI, Redux, React and Webpack.
 
-Use node v6.11.X
+Use node v6.15.1
 
 ## Setup instructions
 
 ```
+export ANDROID_HOME=<path to sdk>
 npm install -g yarn cordova@7.1.0
 yarn install
 cordova plugin add cordova-plugin-qrscanner cordova-plugin-file cordova-plugin-http cordova-clipboard cordova-plugin-inappbrowser cordova-plugin-device cordova-plugin-wkwebview-engine cordova-plugin-whitelist
-cordova plugin add cordova-plugin-google-analytics
-cordova platform add [android@6.2.3 | ios]
-```
-### debug ios/android
-```
-npm run debug:ios
-npm run debug:android
-```
-### final ios
-```
-npm run final:ios
+cordova platform add android@6.2.3
+cordova run android
+
+# Generate a Signed APK
+cordova build --release android
+zipalign -v 4 <Example-release-unsigned.apk> <Example.apk>
+apksigner sign --ks <keystorename> <Example.apk>
+
 ```
 
-### create safecoin.keystore file for signed APK (must contain "safecoin_play")
+## Updating Color Scheme or Logo
+Toolbar color scheme location:
 ```
-npm run keystoregen
+assets/css/index.css
 ```
 
-### final android
+Logo location:
 ```
-npm run final:android
+assets/img/safecoin.png
 ```
 
 ### iOS FAQ
 
 1. Icons
 
-Icons are a bit of a bitch to setup for iOS. Make sure you've added the ios platform to cordova, and copy the folder `./assets/img/ios/AppIcon.appiconset` to `./platforms/ios/SAFE\ Wallet/Images.xcassets`. Remove the folder `AppIcon.appiconset` if it exists in `./platforms/ios/SAFE\ Wallet/Images.xcassets`.
+Icons are a bit of a pain to setup for iOS. Make sure you've added the ios platform to cordova, and copy the folder `./assets/img/ios/AppIcon.appiconset` to `./platforms/ios/SAFE\ Wallet/Images.xcassets`. Remove the folder `AppIcon.appiconset` if it exists in `./platforms/ios/SAFE\ Wallet/Images.xcassets`.
 
 2. `.ipa` files (using it on a real iPhone)
 

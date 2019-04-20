@@ -1,7 +1,7 @@
 {
   "name": "safecoin-mobile",
-  "version": "0.0.1",
-  "description": "Mobile Wallet for SafeCoin",
+  "version": "0.0.6",
+  "description": "Mobile Wallet for Safecoin",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --host 0.0.0.0 --progress --content-base www/",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OleksandrBlack/safecoin-mobile.git"
+    "url": "git+https://github.com/Fair-Exchange/safecoin-mobile.git"
   },
-  "author": "Kendrick Tan <kendricktan0814@gmail.com>",
+  "author": "Safecoin DEV TEAM <safe@safecoin.org>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/OleksandrBlack/safecoin-mobile/issues"
+    "url": "https://github.com/Fair-Exchange/safecoin-mobile/issues"
   },
   "homepage": "https://safecoin.org",
   "devDependencies": {
@@ -35,11 +35,11 @@
     "chance": "^1.0.11",
     "country-data": "0.0.31",
     "cross-env": "^5.0.5",
-    "css-loader": "^0.28.7",
+    "css-loader": "^2.1.0",
     "eslint": "^4.12.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-flowtype": "^2.39.1",
-    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.4.0",
@@ -48,7 +48,7 @@
     "flow-bin": "^0.54.1",
     "isomorphic-fetch": "^2.2.1",
     "json-loader": "^0.5.4",
-    "moment": "^2.18.1",
+    "moment": "^2.24.0",
     "ncp": "^2.0.0",
     "node-uuid": "^1.4.7",
     "onsenui": "2.5.3",
@@ -64,7 +64,7 @@
     "redux": "^3.6.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.1.0",
-    "sentencer": "^0.1.5",
+    "sentencer": "^0.2.0",
     "simple-plist": "^0.2.1",
     "style-loader": "^0.18.2",
     "stylus": "^0.54.5",
@@ -74,15 +74,15 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "bitcore-mnemonic": "1.7.0",
     "cordova-android": "^6.2.3",
-    "cordova-clipboard": "^1.1.1",
+    "cordova-clipboard": "^1.2.1",
     "cordova-plugin-compat": "^1.2.0",
-    "cordova-plugin-device": "^1.1.7",
+    "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-file": "^4.3.3",
-    "cordova-plugin-google-analytics": "^1.8.3",
     "cordova-plugin-http": "^1.2.0",
-    "cordova-plugin-inappbrowser": "^1.7.2",
-    "cordova-plugin-qrscanner": "^2.5.0",
+    "cordova-plugin-inappbrowser": "^3.0.0",
+    "cordova-plugin-qrscanner": "^2.6.1",
     "cordova-plugin-whitelist": "^1.3.3",
     "cordova-plugin-wkwebview-engine": "^1.1.4",
     "danielsogl-cordova-plugin-clipboard": "^1.0.2",
@@ -90,15 +90,14 @@
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-qrscanner": {},
       "cordova-plugin-file": {},
+      "cordova-plugin-qrscanner": {},
       "cordova-plugin-http": {},
       "cordova-clipboard": {},
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-device": {},
       "cordova-plugin-wkwebview-engine": {},
-      "cordova-plugin-whitelist": {},
-      "cordova-plugin-google-analytics": {}
+      "cordova-plugin-whitelist": {}
     },
     "platforms": [
       "android"

@@ -77,7 +77,7 @@ class SendPage extends React.Component {
       confirmSend: false,
       addressReceive: '',
       sendValue: 1,
-      sendFee: 0.000001,
+      sendFee: 0.0001,
       progressValue: 0,
       sendTxid: '',
       sendCurrencyValue: props.context.currencyValue
@@ -103,7 +103,6 @@ class SendPage extends React.Component {
     const sendVal = parseFloat(str)
 
     if (!isNaN(sendVal) && str[str.length - 1] !== '.') {
-      // Jesus fuck Javascript
       this.setState({
         sendValue: str,
         sendCurrencyValue: prettyFormatPrices((this.props.context.currencyValue * sendVal), 6)
@@ -147,8 +146,7 @@ class SendPage extends React.Component {
   }
 
   componentDidMount () {
-    // Track event
-    window.ga.trackView('Send Page')
+
 
     // Get fees dynamically each time component is mounted
     const statusURL = urlAppend(this.props.settings.insightAPI, 'status')
@@ -195,8 +193,11 @@ class SendPage extends React.Component {
             alert(JSON.stringify(err))
           } else {
             // The scan completed, display the contents of the QR code
+            const scannedResultSeparated = address.split(/(?:safecoin:|=|&|\?)+/)
+            const scannedAddress = scannedResultSeparated[1] || address
+
             this.setState({
-              addressReceive: address
+              addressReceive: scannedAddress
             })
           }
 
@@ -232,8 +233,8 @@ class SendPage extends React.Component {
 
     // Convert how much we wanna send
     // to satoshis
-    const satoshisToSend = Math.round(value * 100000000)
-    const satoshisfeesToSend = Math.round(fee) * 2 // fees already in satoshis, multiply by 2 so faster tx confirmation
+    const satoshisToSend = value * 100000000
+    const satoshisfeesToSend = 10000 //set static fee of 0.0001
 
     // Reset safe send progress
     this.setProgressValue(1)
@@ -325,6 +326,7 @@ class SendPage extends React.Component {
                   if (satoshisSoFar >= satoshisToSend + satoshisfeesToSend) {
                     break
                   }
+     
                 }
 
                 // If we don't have enough address
@@ -375,34 +377,22 @@ class SendPage extends React.Component {
                       sendTxid: txRespData.txid
                     })
                   })
-                  .catch((err) => {
-                    // Don't wanna setup firebase lmao
-                    window.ga.trackEvent('Send rawtx error', JSON.stringify(err))
-                    window.ga.dispatch()
+                  .catch((err) => {       
                     alert('Send failure: ' + JSON.stringify(err))
 
                     this.setProgressValue(0)
                   })
               }).catch((err) => {
-                // Don't wanna setup firebase lmao
-                window.ga.trackEvent('Get blockinfo error', JSON.stringify(err))
-                window.ga.dispatch()
                 alert('GET failure: ' + JSON.stringify(err))
 
                 this.setProgressValue(0)
               })
           }).catch((err) => {
-            // Don't wanna setup firebase lmao
-            window.ga.trackEvent('Get blockheight and blockhash error', JSON.stringify(err))
-            window.ga.dispatch()
             alert('GET failure: ' + JSON.stringify(err))
 
             this.setProgressValue(0)
           })
       }).catch((err) => {
-        // Don't wanna setup firebase lmao
-        window.ga.trackEvent('Get utxo error', JSON.stringify(err))
-        window.ga.dispatch()
         alert('GET failure: ' + JSON.stringify(err))
 
         this.setProgressValue(0)
@@ -519,7 +509,7 @@ class SendPage extends React.Component {
                   <Button
                     modifier='quiet'
                     onClick={
-                      () => this.handleSendValueChange({ target: { value: (this.props.context.value - (this.state.sendFee / 100000000)).toPrecision(8) } })}
+                      () => this.handleSendValueChange({ target: { value: this.props.context.value == 0 ? 0 : ((this.props.context.value * 100000000- 10000)/100000000).toPrecision(8)} })}
                   >
                     {maxLang}
                   </Button>
@@ -528,7 +518,7 @@ class SendPage extends React.Component {
                   <ons-col>
                     <span style={{ fontSize: '12px', color: '#7f8c8d' }}>
                       {balanceLang}:&nbsp;
-                      {prettyFormatPrices(this.props.context.value)}&nbsp;
+                      {this.props.context.value}&nbsp;
                     SAFE
                     </span>
                     <Input
@@ -560,8 +550,16 @@ class SendPage extends React.Component {
                   </ons-col>
                 </ons-row>
 
-                <br />
+             
+                <div>          
+                    <ons-col width={'45%'}>
+                        <ons-row>
+                            <span style={{ fontSize: '12px', color: '#7f8c8d', textAlign: 'center' }}>0.0001 fee</span>
+                        </ons-row>
+                    </ons-col>
+                </div>
 
+                <br />
                 <div>
                   <label className="left">
                     <Checkbox

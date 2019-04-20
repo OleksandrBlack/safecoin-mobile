@@ -19,9 +19,7 @@ import {
 import TRANSLATIONS from '../translations'
 
 class SelectInsightPage extends React.Component {
-  componentDidMount() {    
-    window.ga.trackView('Insight Page')
-  }
+
 
   renderToolbar () {
     return (
@@ -51,8 +49,11 @@ class SelectInsightPage extends React.Component {
           <ListHeader>
             Preconfigured Nodes
           </ListHeader>
-          <ListItem tappable onClick={() => this.props.setInsightAPI('https://explorer.safecoin.org/api')}>
-            explorer.safecoin.org
+          <ListItem tappable onClick={() => this.props.setInsightAPI('https://explorer.safecoin.org/api/')}>
+            horizen.global
+          </ListItem>
+          <ListItem tappable onClick={() => this.props.setInsightAPI('https://safe.safc.cc/api/')}>
+            explorer.zen-solutions.io
           </ListItem>
         </List>
       </Page>

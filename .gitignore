@@ -39,3 +39,5 @@ plugins
 .vscode/
 dist/
 lib/
+.idea/
+release.apk
