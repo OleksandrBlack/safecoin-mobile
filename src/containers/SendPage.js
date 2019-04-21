@@ -17,7 +17,7 @@ import {
   ListHeader
 } from 'react-onsenui'
 
-import safecoinjs from 'safecoinjs'
+import safecoinjs from 'bitgo-utxo-lib'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -271,9 +271,6 @@ class SendPage extends React.Component {
       return
     }
 
-    // Private key
-    const senderPrivateKey = safecoinjs.address.WIFToPrivKey(this.props.context.privateKey)
-
     // Get previous transactions
     const prevTxURL = urlAppend(this.props.settings.insightAPI, 'addr/') + senderAddress + '/utxo'
     const infoURL = urlAppend(this.props.settings.insightAPI, 'status?q=getInfo')
@@ -318,6 +315,7 @@ class SendPage extends React.Component {
                   history = history.concat({
                     txid: txData[i].txid,
                     vout: txData[i].vout,
+                    satoshis: txData[i].satoshis,
                     scriptPubKey: txData[i].scriptPubKey
                   })
 
@@ -348,16 +346,35 @@ class SendPage extends React.Component {
                   }
                 }
 
-                // Create transaction
-                var txObj = safecoinjs.transaction.createRawTx(history, recipients, blockHeight, blockHash)
+                //Start building transaction
+                let network = bitcoinjs.networks['safecoin']
+                var keyPair = bitcoinjs.ECPair.fromWIF(this.props.context.privateKey,network)
+                var txb = new bitcoinjs.TransactionBuilder(network)
+
+                if (infoData.info.blocks  >= 547422) {
+                  txb.setVersion(bitcoinjs.Transaction.ZCASH_SAPLING_VERSION)
+                  txb.setVersionGroupId(0x892F2085)
+                  txb.setExpiryHeight(infoData.info.blocks+300)
+                }
+
+                //add inputs
+                for (var j = 0; j < history.length; j++) {
+                  txb.addInput(history[j].txid, history[j].vout)
+                }
+
+                //add outputs
+                for (var k = 0; k < recipients.length; k++) {
+                  var outputScript = bitcoinjs.address.toOutputScript(recipients[k].address,network)
+                  txb.addOutput(outputScript, recipients[k].satoshis)
+                }
 
                 // Sign each history transcation
-                for (var j = 0; j < history.length; j++) {
-                  txObj = safecoinjs.transaction.signTx(txObj, j, senderPrivateKey, true)
+                for (var l = 0; l < history.length; l++) {
+                  txb.sign(l,keyPair,'',bitcoinjs.Transaction.SIGHASH_SINGLE,history[l].satoshis,'')
                 }
 
                 // Convert it to hex string
-                const txHexString = safecoinjs.transaction.serializeTx(txObj)
+                const txHexString = txb.build().toHex()
 
                 // Post it to the api
                 axios.post(sendRawTxURL,

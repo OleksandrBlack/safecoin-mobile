@@ -74,6 +74,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "bitgo-utxo-lib": "git+https://github.com/Fair-Exchange/bitgo-utxo-lib-safecoin.git",
     "bitcore-mnemonic": "1.7.0",
     "cordova-android": "^6.2.3",
     "cordova-clipboard": "^1.2.1",

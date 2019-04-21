@@ -6187,3 +6187,28 @@ safecoinjs@^1.0.0:
     varuint-bitcoin "1.0.4"
     webpack "3.8.1"
     yargs "10.0.3"
+	
+"bitgo-utxo-lib@git+https://github.com/Fair-Exchange/bitgo-utxo-lib-safecoin.git":
+  version "1.3.2"
+  resolved "git+https://github.com/Fair-Exchange/bitgo-utxo-lib-safecoin.git#9384382119bed2b81acd249df2313ae0ebf25c8f"
+  dependencies:
+    bech32 "0.0.3"
+    bigi "^1.4.0"
+    bip66 "^1.1.0"
+    bitcoin-ops "^1.3.0"
+    blake2b "https://github.com/BitGo/blake2b#6268e6dd678661e0acc4359e9171b97eb1ebf8ac"
+    bs58check "^2.0.0"
+    create-hash "^1.1.0"
+    create-hmac "^1.1.3"
+    debug "~3.1.0"
+    ecurve "^1.0.0"
+    groestl-hash-js "git://github.com/TheTrunk/groestl-hash-js.git#master"
+    merkle-lib "^2.0.10"
+    pushdata-bitcoin "^1.0.1"
+    randombytes "^2.0.1"
+    safe-buffer "^5.0.1"
+    typeforce "^1.11.3"
+    varuint-bitcoin "^1.0.4"
+    wif "^2.0.1"
+  optionalDependencies:
+    secp256k1 "^3.5.2"
