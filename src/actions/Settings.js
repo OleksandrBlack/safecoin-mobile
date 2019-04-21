@@ -83,7 +83,7 @@ export const LANG_ITALIAN = 'Italian'
 export const LANG_NORWEGIAN = 'Norwegian'
 export const LANG_PORTUGUESE = 'Portuguese'
 export const LANG_RUSSIAN = 'Russian'
-export const LANG_UKRAINIAN = 'Ukrainian'
+export const LANG_UKRAINE = 'Ukraine'
 export const LANG_SERBIAN = 'Serbian'
 export const LANG_SPANISH = 'Spanish'
 export const LANG_SWEDISH = 'Swedish'
@@ -102,7 +102,7 @@ export const LANGUAGES = [
   LANG_NORWEGIAN,
   LANG_PORTUGUESE,
   LANG_RUSSIAN,
-  LANG_UKRAINIAN,
+  LANG_UKRAINE,
   LANG_SERBIAN,
   LANG_SPANISH,
   LANG_SWEDISH
