@@ -12,8 +12,8 @@ import {
 } from '../actions/Settings'
 
 const initialSettings = {
-  insightAPI: 'https://explorer.safecoin.org/api/',
-  explorerURL: 'https://explorer.safecoin.org/',
+  insightAPI: 'http://miodrag.zone:4444/insight-api-safecoin/',
+  explorerURL: 'http://miodrag.zone:4444/',
   language: LANG_ENGLISH,
   currency: CURRENCY_USD,
   pin: null

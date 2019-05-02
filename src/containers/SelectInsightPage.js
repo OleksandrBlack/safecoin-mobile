@@ -55,6 +55,9 @@ class SelectInsightPage extends React.Component {
           <ListItem tappable onClick={() => this.props.setInsightAPI('https://explorer.zer.zelcore.io/api/')}>
             explorer.zer.zelcore.io
           </ListItem>
+          <ListItem tappable onClick={() => this.props.setInsightAPI('http://miodrag.zone:4444/insight-api-safecoin/')}>
+            miodrag.zone
+          </ListItem>
         </List>
       </Page>
     )
